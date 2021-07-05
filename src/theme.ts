@@ -17,4 +17,9 @@ export const theme = createMuiTheme({
       main: lime[500],
     },
   },
+  props: {
+    MuiButtonBase: {
+      disableRipple: true,
+    },
+  },
 });
