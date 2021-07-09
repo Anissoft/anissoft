@@ -2,13 +2,13 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export const useStyles = makeStyles(theme => ({
   root: {
-    padding: '64px 16px',
-    maxWidth: '100vw',
+    // padding: '16px',
+    // overflowY: '',
     minWidth: theme.breakpoints.values.sm,
-    [theme.breakpoints.up('md')]: {
-      overflowY: 'auto',
-      padding: '64px 28px',
-    },
+    maxWidth: theme.breakpoints.values.lg,
+  },
+  content: {
+    maxWidth: '100%',
   },
   roundImage: {
     width: '100%',
@@ -16,6 +16,6 @@ export const useStyles = makeStyles(theme => ({
     display: 'block',
   },
   toolbar: {
-    padding: '16px 24px'
+    padding: '16px 0px'
   },
 }));

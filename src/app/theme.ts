@@ -1,20 +1,18 @@
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 import { grey, lime } from '@material-ui/core/colors';
 
-export const theme = createMuiTheme({
+export const createTheme = ({ themeType }: { themeType: 'dark' | 'light' }) => responsiveFontSizes(createMuiTheme({
   typography: {
     fontFamily: 'Montserrat,sans-serif;',
     fontSize: 32
   },
   palette: {
-    background: {
-      default: '#fafafa',
-    },
+    type: themeType,
     secondary: {
       main: grey[50],
     },
     primary: {
-      main: lime[500],
+      main: grey[50],
     },
   },
   props: {
@@ -22,4 +20,5 @@ export const theme = createMuiTheme({
       disableRipple: true,
     },
   },
-});
+}));
+
