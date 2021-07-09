@@ -3,13 +3,16 @@
   "version": "0.0.1",
   "browserslist": "> 0.2%",
   "scripts": {
-    "start": "parcel serve './src/index.pug'",
-    "build": "parcel build './src/index.pug' --no-source-maps"
+    "local": "parcel serve './src/index.pug'",
+    "prepare": "rm -rf ./dist && mkdir ./dist && git clone https://github.com/Anissoft/anissoft.github.io.git dist",
+    "make": "parcel build './src/index.pug' --no-source-maps && npm version patch",
+    "publish": "git -C ./dist add . && version=$(node -e \"console.log(require('./package.json').version);\") && git -C ./dist commit -m \"release $version\" && git -C ./dist push",
+    "release": "npm run prepare && npm run make && npm run pusblish"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@anissoft/react-hooks": "^1.2.4",
+    "@anissoft/react-hooks": "^1.2.5",
     "@parcel/transformer-image": "^2.0.0-nightly.2340",
     "@parcel/transformer-pug": "^2.0.0-nightly.718",
     "@types/react": "^17.0.11",
