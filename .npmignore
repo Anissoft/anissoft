@@ -1,0 +1,12 @@
+.eslintignore
+.eslintrc.js
+.gitignore
+.prettierrc.js
+.vscode
+.cache
+.travis.yml
+
+./dist
+./node_modules
+
+tsconfig.*

@@ -1,0 +1,44 @@
+{
+  "name": "anissoft-resume",
+  "version": "0.0.3",
+  "browserslist": "> 0.2%",
+  "scripts": {
+    "local": "parcel serve './src/index.pug'",
+    "prepare": "rm -rf ./dist && mkdir ./dist && git clone https://github.com/Anissoft/anissoft.github.io.git dist",
+    "make": "parcel build './src/index.pug' --no-source-maps && npm version patch",
+    "publish": "git -C ./dist add . && version=$(node -e \"console.log(require('./package.json').version);\") && git -C ./dist commit -m \"release $version\" && git -C ./dist push",
+    "release": "npm run prepare && npm run make && npm run publish"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@anissoft/react-hooks": "^1.2.5",
+    "@parcel/transformer-image": "^2.0.0-nightly.2340",
+    "@parcel/transformer-pug": "^2.0.0-nightly.718",
+    "@types/react": "^17.0.11",
+    "@types/react-dom": "^17.0.7",
+    "@types/react-router": "^5.1.15",
+    "@types/react-router-dom": "^5.1.7",
+    "@typescript-eslint/eslint-plugin": "^4.26.1",
+    "@typescript-eslint/parser": "^4.26.1",
+    "eslint": "^7.28.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "parcel": "^2.0.0-nightly.716",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.3.1",
+    "typescript": "^4.3.2"
+  },
+  "dependencies": {
+    "@anissoft/react-conditions": "^1.0.1",
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/styles": "^4.11.4",
+    "clsx": "^1.1.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0"
+  }
+}
