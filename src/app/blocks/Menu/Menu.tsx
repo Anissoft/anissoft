@@ -20,6 +20,7 @@ export function Menu() {
     <Grid container direction="row" spacing={1} justify="space-between" alignItems="center">
       <Grid item>
         <Button
+          aria-label="enable light theme"
           onClick={() => setThemeType('light')}
           size="small"
           variant="text"
@@ -29,6 +30,7 @@ export function Menu() {
         </Button>
         {` | `}
         <Button
+          aria-label="enable dark theme"
           onClick={() => setThemeType('dark')}
           size="small"
           variant="text"
@@ -41,6 +43,7 @@ export function Menu() {
       </Grid>
       <Grid item>
         <Button
+          aria-label="switch language to eng"
           onClick={() => setLocale(Locale.en)}
           size="small"
           variant="text"
@@ -50,6 +53,7 @@ export function Menu() {
         </Button>
         {` | `}
         <Button
+          aria-label="switch language to ru"
           onClick={() => setLocale(Locale.ru)}
           size="small"
           variant="text"

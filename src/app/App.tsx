@@ -25,7 +25,7 @@ export function Root() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Container className={classes.root}>
-        <Toolbar variant="dense" className={classes.toolbar}>
+        <Toolbar variant="dense" className={classes.toolbar} component="header">
           <Menu />
         </Toolbar>
         <Grid item container justify={'center'} spacing={8} className={classes.content}>

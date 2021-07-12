@@ -26,6 +26,7 @@ export function Avatar() {
       loadingMode="sequence"
       onError={console.error}
       className={classes.image}
+      alt="Avatar"
     />
   )
 }
