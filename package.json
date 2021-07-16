@@ -5,7 +5,7 @@
   "scripts": {
     "local": "parcel serve './src/index.pug'",
     "prepare": "rm -rf ./dist && mkdir ./dist && git clone https://github.com/Anissoft/anissoft.github.io.git dist",
-    "make": "parcel build './src/index.pug' --no-source-maps && npm version patch",
+    "make": "git -C ./dist rm -rf . && parcel build './src/index.pug' --no-source-maps && npm version patch",
     "publish": "git -C ./dist add . && version=$(node -e \"console.log(require('./package.json').version);\") && git -C ./dist commit -m \"release $version\" && git -C ./dist push",
     "release": "npm run prepare && npm run make && npm run publish"
   },
