@@ -18,4 +18,12 @@ html(lang="en")
   body
     div(id="root")
     script(src="./index.tsx")
+    script(async src="https://www.googletagmanager.com/gtag/js?id=G-7P0GC4HQ7S")
+    script.
+      if (window.location.hostname !== 'localhost') {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-7P0GC4HQ7S');
+      }
       
