@@ -1,6 +1,6 @@
 {
   "name": "anissoft-resume",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "browserslist": "> 0.2%",
   "scripts": {
     "local": "parcel serve './src/index.pug'",
