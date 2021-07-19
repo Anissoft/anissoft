@@ -4,11 +4,14 @@ export const useStyles = makeStyles(theme => ({
   root: {
     // padding: '16px',
     // overflowY: '',
-    minWidth: theme.breakpoints.values.sm,
+    position: 'relative',
+    minWidth: '330px',
     maxWidth: theme.breakpoints.values.lg,
   },
   content: {
-    maxWidth: '100%',
+    [theme.breakpoints.up('md')]: {
+      maxWidth: '100%',
+    },
   },
   roundImage: {
     width: '100%',
@@ -16,6 +19,7 @@ export const useStyles = makeStyles(theme => ({
     display: 'block',
   },
   toolbar: {
-    padding: '16px 0px'
+    width: '100%',
+    padding: '16px 0px',
   },
 }));

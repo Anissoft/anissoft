@@ -29,7 +29,7 @@ export function Root() {
           <Menu />
         </Toolbar>
         <Grid item container justify={'center'} spacing={8} className={classes.content}>
-          <Grid item xs={10} sm={7} md={6} lg={3} xl={2}>
+          <Grid item xs={10} sm={7} md={6} lg={4} xl={2}>
             <Avatar />
           </Grid>
           <Grid item xs={12}>

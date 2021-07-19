@@ -20,5 +20,7 @@ export const createTheme = ({ themeType }: { themeType: 'dark' | 'light' }) => r
       disableRipple: true,
     },
   },
-}));
+}), {
+  factor: 4
+});
 
