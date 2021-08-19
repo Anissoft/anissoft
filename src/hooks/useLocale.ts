@@ -24,6 +24,9 @@ export function useLocale() {
     if (localeInStorage !== locale) {
       setlocaleInStorage(locale as string)
     }
+    if (!Object.values(Locale).includes(locale as Locale)) {
+      setlocale(defaultLocale);
+    }
   }, [locale, localeInStorage]);
 
   return [locale, changeLocale] as [Locale, (lang: Locale) => void];
