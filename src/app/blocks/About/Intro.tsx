@@ -23,7 +23,7 @@ export function Intro() {
           Я специализируюсь на создании удобных и практичных пользовательских интерфейсов и веб-приложений с помощью <strong>NodeJS, React</strong> и <strong>дизайн систем</strong>.
         </Case>
         <Default >
-          Hello I'm Alexey, a <strong>frontend developer</strong> from Russia, with more than <strong>{workExperienceInYears} years</strong> of experience in web development.
+          Hello I'm Alexey, a <strong>frontend developer</strong> with more than <strong>{workExperienceInYears} years</strong> of experience in web development.
           My specialization is the creation of interactive and user-friendly interfaces and web applications using <strong>NodeJS, React</strong> and <strong>Design Systems</strong>.
         </Default>
       </Switch>
