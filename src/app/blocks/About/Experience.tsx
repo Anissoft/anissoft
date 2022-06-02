@@ -24,7 +24,7 @@ export function Experience() {
           side by side with designers, engineers, analysts and other specialists;
           <strong> Led and developed</strong> projects from scratch and took existing ones for support and improvements;
           Used to be involved in the <strong>development of the team processes</strong>;
-          Was a <strong>mentor</strong> for interns and new developers and also taught in <strong>front-end courses</strong>.
+          Was a <strong>mentor</strong> for interns and new developers and also taught <strong>front-end courses</strong>.
         </Default>
       </Switch>
     </Typography>
