@@ -6,7 +6,7 @@ export const useStyles = makeStyles(theme => ({
   },
   dot: {
     width: '48px',
-    margin: '16px 2px',
+    margin: '16px 2px !important',
     borderRadius: '10px !important',
     '& > svg': {
       fontSize: '2.3rem',

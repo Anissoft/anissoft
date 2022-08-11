@@ -50,8 +50,8 @@ export function Experience() {
       title: locale === Locale.ru ? 'Старший инженер-разработчик' : 'Senior Software Engineer',
       spec: 'Frontend',
       description: locale === Locale.ru 
-        ? <Typography>Проектирование и разработка веб приложения для коммуникаций, включая голосовые и видео звонки, чаты (UCaaS-платформа). Наше решение успешно заменило предыдущую интеграцию платформы со сторонним решением от Zoom.</Typography>
-        : <Typography>Our team designed and implemented web frontend application for Ringcentral\'s UCaaS-platform that succesfuly replaced previous integration with Zoom.</Typography>,
+        ? <p>Проектирование и разработка веб приложения для коммуникаций, включая голосовые и видео звонки, чаты (UCaaS-платформа). Наше решение успешно заменило предыдущую интеграцию платформы со сторонним решением от Zoom.</p>
+        : <p>Our team designed and implemented web frontend application for Ringcentral\'s UCaaS-platform that succesfuly replaced previous integration with Zoom.</p>,
     },
     {
       company: locale === Locale.ru ? <>Тинькофф</> : <>Tinkoff</>,
@@ -62,12 +62,12 @@ export function Experience() {
       title: locale === Locale.ru ? 'Инженер-разработчик' : 'Software Engineer',
       description: locale === Locale.ru 
         ? <>
-            <Typography>Работал в отделе аналитической платформы, в команде разрабатывающей онлайн-IDE для аналитиков банка и ETL разработчиков.</Typography>
-            <Typography>Главным вызовом была оптимизация производительности приложения при рендере комплексных ноутбуков, c большим количеством редакторов кода, табличных и графических представлений данных.</Typography>
+            <p>Работал в отделе аналитической платформы, в команде разрабатывающей онлайн-IDE для аналитиков банка и ETL разработчиков.</p>
+            <p>Главным вызовом была оптимизация производительности приложения при рендере комплексных ноутбуков, c большим количеством редакторов кода, табличных и графических представлений данных.</p>
           </>
         : <>
-            <Typography>Was part of the DWH department. Developed frontend of collaborative online-IDE for bank analysts and ETL developers.</Typography>
-            <Typography>The main challenge was to optimize the performance of the application when rendering complex notebooks, with a large amount of code editors, tables and graphical data representations.</Typography>
+            <p>Was part of the DWH department. Developed frontend of collaborative online-IDE for bank analysts and ETL developers.</p>
+            <p>The main challenge was to optimize the performance of the application when rendering complex notebooks, with a large amount of code editors, tables and graphical data representations.</p>
           </>,
     },
     {
@@ -79,12 +79,12 @@ export function Experience() {
       title: locale === Locale.ru ? 'Инженер-разработчик' : 'Software Engineer',
       description: locale === Locale.ru 
         ? <>
-            <Typography>Участвовал в разработке фронтенда нескольких продуктов и сервисов Контура (глобальная система мониторинга и менеджмента пользовательских данных, личный кабинет пользователя,  сервис для работы с исполнительными производствами "Право" и другие).</Typography>
-            <Typography>Разрабатывал и поддерживал внутренние инструменты и библиотеки для разработки на NodeJS.</Typography>
+            <p>Участвовал в разработке фронтенда нескольких продуктов и сервисов Контура (глобальная система мониторинга и менеджмента пользовательских данных, личный кабинет пользователя,  сервис для работы с исполнительными производствами "Право" и другие).</p>
+            <p>Разрабатывал и поддерживал внутренние инструменты и библиотеки для разработки на NodeJS.</p>
           </>
         : <>
-            <Typography>Participated in the development of the front-end of several products and services of Kontur (a global system for monitoring and managing user data, a personal profile application, a service for working with enforcement proceedings "Kontur.Pravo" and others).</Typography>
-            <Typography>Developed and maintained internal tools and libraries for NodeJS development.</Typography>
+            <p>Participated in the development of the front-end of several products and services of Kontur (a global system for monitoring and managing user data, a personal profile application, a service for working with enforcement proceedings "Kontur.Pravo" and others).</p>
+            <p>Developed and maintained internal tools and libraries for NodeJS development.</p>
           </>,
     },
     {
@@ -96,12 +96,12 @@ export function Experience() {
       title: locale === Locale.ru ? 'Ведущий инженер-разработчик' : 'Lead Software Engineer',
       description: locale === Locale.ru 
         ? <>
-            <Typography>Вел разработку большого количество проектов связанных с веб-приложениями и браузерными расширениями для кэшбэк и купон сервисов, VPN, антивирусов и других сфер деятельности.</Typography>
-            <Typography>Разрабатывал архитекутру внутреннего решения для разработки кроссс-браузерных расширений, что позволило использовать одну кодовую базу для всех браузеров.</Typography>
+            <p>Вел разработку большого количество проектов связанных с веб-приложениями и браузерными расширениями для кэшбэк и купон сервисов, VPN, антивирусов и других сфер деятельности.</p>
+            <p>Разрабатывал архитекутру внутреннего решения для разработки кроссс-браузерных расширений, что позволило использовать одну кодовую базу для всех браузеров.</p>
           </>
         : <>
-            <Typography>Led the development of a large amount of projects related to web applications and browser extensions for cashback and coupon services, VPNs, antiviruses and etc.</Typography>
-            <Typography>Developed the architecture of an internal framework for the development of cross-browser extensions, which made possible to use single codebase for all browsers.</Typography>
+            <p>Led the development of a large amount of projects related to web applications and browser extensions for cashback and coupon services, VPNs, antiviruses and etc.</p>
+            <p>Developed the architecture of an internal framework for the development of cross-browser extensions, which made possible to use single codebase for all browsers.</p>
           </>,
     },
     {
@@ -113,10 +113,10 @@ export function Experience() {
       title: locale === Locale.ru ? 'Младший инженер-разработчик' : 'Junior Software Engineer',
       description: locale === Locale.ru 
         ? <>
-            <Typography>Поектировал и разратывал hardware систему для рассылки сообщений через мессенджеры. Участвовал в разработке системы мониторинга удаленных серверов.</Typography>
+            <p>Поектировал и разрабатывал hardware систему для рассылки сообщений через мессенджеры. Участвовал в разработке системы мониторинга удаленных серверов.</p>
           </>
         : <>
-            <Typography>Designed and developed a hardware system for sending messages via instant messengers. Participated in the development of a monitoring system for remote servers.</Typography>
+           <p>Designed and developed a hardware system for sending messages via instant messengers. Participated in the development of a monitoring system for remote servers.</p>
           </>,
     },
   ], [locale]);
@@ -183,7 +183,7 @@ export function Experience() {
                         <Typography variant="h6" component="h6" gutterBottom>
                           {item.title}
                         </Typography>
-                        <>{item.description}</>
+                        <Typography>{item.description}</Typography>
                       </Paper>
                     </TimelineContent>
                   </TimelineItem>
