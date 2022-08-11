@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { useLocalStorage, useQueryParameter } from '@anissoft/react-hooks';
 
 export enum Locale {
-  ru = 'ru',
-  en = 'en',
+  ru = 'ru-RU',
+  en = 'en-EN',
 }
 const defaultLocale = Locale.en;
 
@@ -29,5 +29,8 @@ export function useLocale() {
     }
   }, [locale, localeInStorage]);
 
-  return [locale, changeLocale] as [Locale, (lang: Locale) => void];
+  return useMemo(
+    () => [locale, changeLocale] as [Locale, (lang: Locale) => void],
+    [locale, changeLocale],
+  );
 }

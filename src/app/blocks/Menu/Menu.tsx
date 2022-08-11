@@ -1,7 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
 import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
 import Grid from '@material-ui/core/Grid';
 import Brightness2Icon from '@material-ui/icons/Brightness2';
 import WbSunnyIcon from '@material-ui/icons/WbSunny';
@@ -17,7 +16,7 @@ export function Menu() {
   const classes = useStyles();
 
   return (
-    <Grid container direction="row" spacing={1} justify="space-between" alignItems="center">
+    <Grid container direction="row" spacing={1} justifyContent="space-between" alignItems="center">
       <Grid item>
         <Button
           aria-label="enable light theme"
@@ -37,9 +36,6 @@ export function Menu() {
           className={clsx({ [classes.enabled]: themeType === 'dark', [classes.disabled]: themeType !== 'dark' })}>
           <Brightness2Icon fontSize="small" />
         </Button>
-        {/* <Button size="small">
-          {themeType === 'dark' ? <WbSunnyIcon fontSize="small" /> : <Brightness2Icon fontSize="small" />}
-        </Button> */}
       </Grid>
       <Grid item>
         <Button
