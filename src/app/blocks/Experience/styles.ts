@@ -1,14 +1,14 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 export const useStyles = makeStyles(theme => ({
-  root: {
+  container: {
     width: '100%',
   },
+  root: {
+    padding: '0px',
+  },
   item: {
-    padding: '6px 16px',
-    [theme.breakpoints.down('sm')]: {
-      padding: '6px 10px',
-    },
+    padding: '6px 4px 16px 16px',
   },
   dot: {
     width: '48px',

@@ -39,11 +39,11 @@ export function Experience() {
     (theme: Theme): Theme => responsiveFontSizes(theme, { factor: 4 }), 
     [],
   );
-  const isWideEnough = useUpBreakpoint('md');
+  const isWideEnough = useUpBreakpoint('sm');
 
   const data = useMemo(() => [
     {
-      company: locale === Locale.ru ? <>DINS</> : <>DINS</>,
+      company: 'DINS',
       from: new Date('16 November 2021 00:00:00 GMT'),
       until: new Date(),
       icon: ringcentral_icon,
@@ -54,7 +54,7 @@ export function Experience() {
         : <p>Our team designed and implemented web frontend application for Ringcentral's UCaaS-platform that succesfuly replaced previous integration with Zoom.</p>,
     },
     {
-      company: locale === Locale.ru ? <>Тинькофф</> : <>Tinkoff</>,
+      company: locale === Locale.ru ? 'Тинькофф' : 'Tinkoff',
       from: new Date('13 January 2021 00:00:00 GMT'),
       until: new Date('1 December 2021 00:00:00 GMT'),
       icon: tinkoff_icon,
@@ -71,7 +71,7 @@ export function Experience() {
           </>,
     },
     {
-      company: locale === Locale.ru ? <>СКБ Контур</> : <>SKB Kontur</>,
+      company: locale === Locale.ru ? 'СКБ Контур' : 'SKB Kontur',
       from: new Date('1 December 2018 00:00:00 GMT'),
       until: new Date('1 January 2021 00:00:00 GMT'),
       icon: kontur_icon,
@@ -135,12 +135,12 @@ export function Experience() {
             in={!collapsed} 
             component={Grid} 
             classes={{
-              wrapper: classes.root,
+              wrapper: classes.container,
             }}
             {...{ item: true, container: true }}
           >
             <ThemeProvider theme={getTimelineTheme}>
-              <Timeline align="left">
+              <Timeline align="left" className={classes.root}>
                 {data.map((item, index) => (
                   <TimelineItem key={`${index}`}>
                     {isWideEnough && (

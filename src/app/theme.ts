@@ -6,6 +6,15 @@ export const createTheme = ({ themeType }: { themeType: 'dark' | 'light' }) => c
     fontFamily: 'Montserrat,sans-serif;',
     fontSize: 32
   },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 750,
+      md: 900,
+      lg: 1200,
+      xl: 1536,
+    },
+  },
   palette: {
     type: themeType,
     secondary: {
@@ -23,7 +32,7 @@ export const createTheme = ({ themeType }: { themeType: 'dark' | 'light' }) => c
   overrides: {
     MuiTimelineContent: {
       root: {
-        flex: 3,
+        flex: '3.5',
       }
     },
     MuiTimelineOppositeContent: {
