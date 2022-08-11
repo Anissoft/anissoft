@@ -43,7 +43,7 @@ export function Experience() {
 
   const data = useMemo(() => [
     {
-      company: locale === Locale.ru ? <>DINS (RingCentral)</> : <>DINS (RingCentral's R&D)</>,
+      company: locale === Locale.ru ? <>DINS</> : <>DINS</>,
       from: new Date('16 November 2021 00:00:00 GMT'),
       until: new Date(),
       icon: ringcentral_icon,
@@ -51,7 +51,7 @@ export function Experience() {
       spec: 'Frontend',
       description: locale === Locale.ru 
         ? <p>Проектирование и разработка веб приложения для коммуникаций, включая голосовые и видео звонки, чаты (UCaaS-платформа). Наше решение успешно заменило предыдущую интеграцию платформы со сторонним решением от Zoom.</p>
-        : <p>Our team designed and implemented web frontend application for Ringcentral\'s UCaaS-platform that succesfuly replaced previous integration with Zoom.</p>,
+        : <p>Our team designed and implemented web frontend application for Ringcentral's UCaaS-platform that succesfuly replaced previous integration with Zoom.</p>,
     },
     {
       company: locale === Locale.ru ? <>Тинькофф</> : <>Tinkoff</>,
@@ -100,7 +100,7 @@ export function Experience() {
             <p>Разрабатывал архитекутру внутреннего решения для разработки кроссс-браузерных расширений, что позволило использовать одну кодовую базу для всех браузеров.</p>
           </>
         : <>
-            <p>Led the development of a large amount of projects related to web applications and browser extensions for cashback and coupon services, VPNs, antiviruses and etc.</p>
+            <p>Led the development of a large amount of projects which includes web applications and browser extensions for cashback and coupon services, VPNs, antiviruses and etc.</p>
             <p>Developed the architecture of an internal framework for the development of cross-browser extensions, which made possible to use single codebase for all browsers.</p>
           </>,
     },
@@ -116,7 +116,7 @@ export function Experience() {
             <p>Поектировал и разрабатывал hardware систему для рассылки сообщений через мессенджеры. Участвовал в разработке системы мониторинга удаленных серверов.</p>
           </>
         : <>
-           <p>Designed and developed a hardware system for sending messages via instant messengers. Participated in the development of a monitoring system for remote servers.</p>
+           <p>Designed and developed a hardware system for sending messages via Whatsapp. Participated in the development of a monitoring system for remote servers.</p>
           </>,
     },
   ], [locale]);
@@ -162,7 +162,7 @@ export function Experience() {
                       }
                       {index !== data.length -1 && <TimelineConnector />}
                     </TimelineSeparator>
-                    <TimelineContent>
+                    <TimelineContent classes={{root: classes.item}}>
                       <Paper elevation={3} className={classes.paper}>
                         {!isWideEnough && (
                           <Grid container justifyContent="space-between" alignItems="baseline">
@@ -183,12 +183,17 @@ export function Experience() {
                         <Typography variant="h6" component="h6" gutterBottom>
                           {item.title}
                         </Typography>
-                        <Typography>{item.description}</Typography>
+                        <Typography component="div">{item.description}</Typography>
                       </Paper>
                     </TimelineContent>
                   </TimelineItem>
                 ))}
               </Timeline>
+              <Grid item container justifyContent="center">
+                <Grid item>
+                 <Button onClick={() => setCollapsed(true)}><ExpandLessIcon fontSize="small" /></Button>
+                </Grid>
+              </Grid>
             </ThemeProvider>
           </Collapse>
       </Grid>

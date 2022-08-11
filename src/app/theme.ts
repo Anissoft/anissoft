@@ -31,7 +31,7 @@ export const createTheme = ({ themeType }: { themeType: 'dark' | 'light' }) => c
         // whiteSpace: 'no-wrap',
         lineHeight: '1.00',
         padding: '8px 16px',
-        flex: '1.6',
+        flex: '1',
       }
     },
     MuiTimelineItem: {
