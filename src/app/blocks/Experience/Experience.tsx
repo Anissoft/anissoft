@@ -11,6 +11,7 @@ import TimelineItem from '@material-ui/lab/TimelineItem';
 import TimelineSeparator from '@material-ui/lab/TimelineSeparator';
 import TimelineConnector from '@material-ui/lab/TimelineConnector';
 import TimelineContent from '@material-ui/lab/TimelineContent';
+import TimelineDot from '@material-ui/lab/TimelineDot';
 import TimelineOppositeContent from '@material-ui/lab/TimelineOppositeContent';
 import ForumIcon from '@material-ui/icons/Forum';
 import Paper from '@material-ui/core/Paper';
@@ -27,9 +28,6 @@ import tinkoff_icon from 'url:./../../../../public/assets/images/tinkoff_logo.pn
 import kontur_icon from 'url:./../../../../public/assets/images/kontur_icon.png';
 // @ts-ignore
 import besttoolbars_logo from 'url:./../../../../public/assets/images/besttoolbars_logo.jpeg';
-// @ts-ignore
-import smsc_icon from 'url:./../../../../public/assets/images/smsc_icon.webp';
-import { TimelineDot } from '@material-ui/lab';
 
 export function Experience() {
   const [locale] = useLocale();
@@ -83,7 +81,7 @@ export function Experience() {
             <p>Разрабатывал и поддерживал внутренние инструменты и библиотеки для разработки на NodeJS.</p>
           </>
         : <>
-            <p>Participated in the development of the front-end of several products and services of Kontur (a global system for monitoring and managing user data, a personal profile application, a service for working with enforcement proceedings "Kontur.Pravo" and others).</p>
+            <p>Participated in the development of the front-end of several products and services of Kontur (a global system for monitoring and managing user data, a personal profile application, a service for management of enforcement proceedings "Kontur.Pravo" and others).</p>
             <p>Developed and maintained internal tools and libraries for NodeJS development.</p>
           </>,
     },
