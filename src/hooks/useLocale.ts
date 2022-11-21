@@ -8,21 +8,24 @@ export enum Locale {
 const defaultLocale = Locale.en;
 
 export function useLocale() {
-  const [localeInStorage, setlocaleInStorage] = useLocalStorage('locale', defaultLocale);
+  const [localeInStorage, setlocaleInStorage] = useLocalStorage(
+    'locale',
+    defaultLocale
+  );
   const [locale, setlocale] = useQueryParameter('lang', localeInStorage);
 
   const changeLocale = React.useCallback((lang: Locale) => {
-    if (Object.values(Locale).includes(lang as Locale)) {
+    if (Object.values(Locale).includes(lang)) {
       setlocale(lang);
     } else {
       setlocale(defaultLocale);
-      throw (`Unsupported locale ${lang}`);
+      throw new Error(`Unsupported locale ${lang}`);
     }
   }, []);
 
   React.useEffect(() => {
     if (localeInStorage !== locale) {
-      setlocaleInStorage(locale as string)
+      setlocaleInStorage(locale as string);
     }
     if (!Object.values(Locale).includes(locale as Locale)) {
       setlocale(defaultLocale);
@@ -31,6 +34,6 @@ export function useLocale() {
 
   return useMemo(
     () => [locale, changeLocale] as [Locale, (lang: Locale) => void],
-    [locale, changeLocale],
+    [locale, changeLocale]
   );
 }

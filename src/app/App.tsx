@@ -18,8 +18,11 @@ import { Experience } from './blocks/Experience';
 export function Root() {
   const [themeType] = useThemeType();
   useLocale();
-  
-  const theme = React.useMemo(() => responsiveFontSizes(createTheme({ themeType }), {factor : 4}), [themeType]);
+
+  const theme = React.useMemo(
+    () => responsiveFontSizes(createTheme({ themeType }), { factor: 4 }),
+    [themeType]
+  );
   const classes = useStyles(theme);
 
   return (
@@ -29,8 +32,22 @@ export function Root() {
         <Toolbar variant="dense" className={classes.menu} component="header">
           <Menu />
         </Toolbar>
-        <Grid item container justifyContent={'center'} spacing={8} className={classes.content}>
-          <Grid item xs={10} sm={6} md={6} lg={4} xl={2} className={classes.avatar}>
+        <Grid
+          item
+          container
+          justifyContent={'center'}
+          spacing={8}
+          className={classes.content}
+        >
+          <Grid
+            item
+            xs={10}
+            sm={6}
+            md={6}
+            lg={4}
+            xl={4}
+            className={classes.avatar}
+          >
             <Avatar />
           </Grid>
           <Grid item xs={12} className={classes.intro}>

@@ -7,7 +7,13 @@ export type ProgressiveImageProps = {
   placeholder?: JSX.Element;
   sequenceTimeout?: number;
   onError?: (error: ErrorEvent) => void;
-} & Omit<React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>, 'placeholder' | 'onError'>
+} & Omit<
+  React.DetailedHTMLProps<
+    React.ImgHTMLAttributes<HTMLImageElement>,
+    HTMLImageElement
+  >,
+  'placeholder' | 'onError'
+>;
 
 export function ProgressiveImage({
   images,
@@ -18,37 +24,43 @@ export function ProgressiveImage({
   ...props
 }: ProgressiveImageProps) {
   const { isMounted } = useMounted();
-  const [currentSrc, setCurrentSrc] = React.useState(placeholder ? '' : images[0]);
+  const [currentSrc, setCurrentSrc] = React.useState(
+    placeholder ? '' : images[0]
+  );
 
   React.useEffect(() => {
     let isAborted = false;
 
     switch (loadingMode) {
       case 'sequence':
-        images.reduce(async (acc, imageSrc, index) => {
+        void images.reduce(async (acc, imageSrc, index) => {
           await acc;
           if (!isMounted() || isAborted) {
             return;
           }
-          return Promise.race([
-            new Promise((res) => {
+          return await Promise.race([
+            new Promise<void>((resolve) => {
               const image = new Image();
               image.addEventListener('load', () => {
-                if (isMounted() && !isAborted && images.indexOf(currentSrc) < index) {
+                if (
+                  isMounted() &&
+                  !isAborted &&
+                  images.indexOf(currentSrc) < index
+                ) {
                   setCurrentSrc(imageSrc);
                 }
-                res();
+                resolve();
               });
               image.addEventListener('error', (error) => {
                 if (onError) {
-                  onError(error)
+                  onError(error);
                 }
-                res();
+                resolve();
               });
               image.src = imageSrc;
             }),
-            new Promise((res) => {
-              setTimeout(res, sequenceTimeout)
+            new Promise<void>((resolve) => {
+              setTimeout(resolve, sequenceTimeout);
             }),
           ]);
         }, Promise.resolve());
@@ -58,13 +70,17 @@ export function ProgressiveImage({
         images.map(async (imageSrc, index) => {
           const image = new Image();
           image.addEventListener('load', () => {
-            if (isMounted() && !isAborted && images.indexOf(currentSrc) < index) {
+            if (
+              isMounted() &&
+              !isAborted &&
+              images.indexOf(currentSrc) < index
+            ) {
               setCurrentSrc(imageSrc);
             }
           });
           image.addEventListener('error', (error) => {
             if (onError) {
-              onError(error)
+              onError(error);
             }
           });
           image.src = imageSrc;
@@ -74,8 +90,12 @@ export function ProgressiveImage({
 
     return () => {
       isAborted = true;
-    }
+    };
   }, [...images, loadingMode]);
 
-  return (!currentSrc && placeholder) ? placeholder : <img src={currentSrc} {...props} />
+  return !currentSrc && placeholder ? (
+    placeholder
+  ) : (
+    <img src={currentSrc} {...props} />
+  );
 }

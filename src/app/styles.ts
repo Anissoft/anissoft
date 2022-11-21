@@ -14,7 +14,7 @@ export const useStyles = makeStyles(() => ({
     backgroundColor: theme.palette.background.default,
     zIndex: 1,
   }),
-  content: (theme: Theme) => ({
+  content: () => ({
     // [theme.breakpoints.up('md')]: {
     //   maxWidth: '100%',
     // },
@@ -25,13 +25,7 @@ export const useStyles = makeStyles(() => ({
     },
     zIndex: 0,
   }),
-  intro: {
-
-  },
-  experience: {
-
-  },
-  socials: {
-
-  }
+  intro: {},
+  experience: {},
+  socials: {},
 }));
