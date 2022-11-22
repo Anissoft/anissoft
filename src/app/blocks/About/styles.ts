@@ -8,5 +8,6 @@ export const useStyles = makeStyles((theme) => ({
     '&:not(:last-child)': {
       marginBottom: '1.5em',
     },
+    paddingLeft: 2, 
   },
 }));
