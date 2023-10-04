@@ -31,7 +31,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.31.10",
     "parcel": "^2.8.0",
-    "postcss": "^8.4.19",
+    "postcss": "^8.4.31",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.3.1",
     "process": "^0.11.10",
