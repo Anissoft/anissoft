@@ -13,7 +13,6 @@ import { useStyles } from './styles';
 import { createTheme } from './theme';
 import { useLocale } from '../hooks/useLocale';
 import { useThemeType } from '../hooks/useThemeType';
-import { Experience } from './blocks/Experience';
 
 export function Root() {
   const [themeType] = useThemeType();
@@ -52,9 +51,6 @@ export function Root() {
           </Grid>
           <Grid item xs={12} className={classes.intro}>
             <Intro />
-          </Grid>
-          <Grid item xs={12} className={classes.experience}>
-            <Experience />
           </Grid>
           <Grid item xs={12} className={classes.socials}>
             <Socials />
